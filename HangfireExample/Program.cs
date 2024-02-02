@@ -15,7 +15,7 @@ builder.Services.AddLogging();
 
 builder.Services.AddHangfireServer(options =>
 {
-    options.Activator = new CustomJobActivator(builder.Services.BuildServiceProvider());
+    // options.Activator = new CustomJobActivator(builder.Services.BuildServiceProvider());
 });
 
 builder.Services.AddScoped<IBackgroundJob, CustomJob>();
@@ -28,7 +28,7 @@ app.UseHangfireDashboard();
 
 var backgroundJobClient = app.Services.GetService<IBackgroundJobClient>();
 backgroundJobClient.Enqueue(() => Console.WriteLine("Hello world from Hangfire!"));
-backgroundJobClient.Enqueue<IBackgroundJob>(x => x.Execute("19"));
+backgroundJobClient.Enqueue<CustomJob>(x => x.Execute("19"));
 
 RecurringJob.AddOrUpdate("say-hello", () => Console.WriteLine("Hello world from Hangfire!"), Cron.Minutely);
 

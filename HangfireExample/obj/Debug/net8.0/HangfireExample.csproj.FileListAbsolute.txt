@@ -78,3 +78,4 @@ C:\Src\Examples\HangfireExample\HangfireExample\obj\Debug\net8.0\refint\Hangfire
 C:\Src\Examples\HangfireExample\HangfireExample\obj\Debug\net8.0\HangfireExample.pdb
 C:\Src\Examples\HangfireExample\HangfireExample\obj\Debug\net8.0\HangfireExample.genruntimeconfig.cache
 C:\Src\Examples\HangfireExample\HangfireExample\obj\Debug\net8.0\ref\HangfireExample.dll
+C:\Src\Examples\HangfireExample\HangfireExample\obj\Debug\net8.0\HangfireExample.sourcelink.json
